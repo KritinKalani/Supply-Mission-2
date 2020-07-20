@@ -49,10 +49,10 @@ World.add(world,carrier1);
 	 World.add(world, bucket1);
 
 	bucket2 = Bodies.rectangle(290,625,20,70, {isStatic:true} );
-	 World.add(world, bucket1);
+	 World.add(world, bucket2);
 
 	bucket3 = Bodies.rectangle(510,625,20,70, {isStatic:true} );
-	 World.add(world, bucket1);
+	 World.add(world, bucket3);
 
 	packageBody = Bodies.circle(width/2 , 200 , 5 , packageBody_options);
 	World.add(world, packageBody);
@@ -76,9 +76,7 @@ function draw() {
   carrierF.display();
 	carrier1.display();
 	carrier2.display();
-	//carrierF.display();
   keyPressed();
-  //stop();
   drawSprites();
 
 }
@@ -89,9 +87,3 @@ function keyPressed() {
 		 Body.setStatic(packageBody,false);
 }
 }
-
-/* function stop() {
-	if(carrierF.y-packageBody.y === carrierF.width/2-packageBody.width/2) {
-		packageBody.setStatic(packageBody,true)
-	}
-} */
